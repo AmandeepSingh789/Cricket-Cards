@@ -1,0 +1,97 @@
+
+*{
+    box-sizing: border-box;
+}
+start-show{
+    background-color: #355834;
+    margin:0px;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+    overflow: hidden;
+    display: flex;
+}
+body{
+    background-image: url(Images/Stadium.jpeg)
+}
+h2{
+    font-family: 'Copperplate',Fantasy;
+    text-align: center;
+    font-size: 80px;
+    color:black;
+    backdrop-filter:blur(12px); 
+    -webkit-backdrop-filter: blur(12px);
+}
+.heading{
+    font-family: 'Copperplate',Fantasy;
+    text-align: center;
+    font-size: 80px;
+    backdrop-filter:blur(12px); 
+    -webkit-backdrop-filter: blur(12px);
+
+
+}
+.container{
+    display: flex;
+    width: 90vw;
+    padding:20px;
+}
+
+.panel{
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color:rgb(255, 255, 255);
+    cursor: pointer;
+    flex:0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+
+.panel h3{
+    font-size: 20px;
+    position: absolute;
+    bottom:20px;
+    left:20px;
+    margin:0;
+    opacity:0;
+}
+.panel.active{
+    flex:5;
+    filter:blur(0px);
+}
+
+.panel.active h3{
+    font-family: 'Lucida Console',Monospace;
+    opacity:1;
+    background-color: #ffffff10;
+    transition: opacity 0.3s ease-in 0.8s ;
+    backdrop-filter:blur(12px); 
+    -webkit-backdrop-filter: blur(12px);
+    padding:15px;
+    color:black;
+    border-radius: 10%;
+}
+
+.about-button{
+    backdrop-filter:blur(12px); 
+    -webkit-backdrop-filter: blur(12px);
+    background-color: #ffffff10;
+    border-radius: 20%;
+    font-family: 'Lucida Console',Monospace;
+}
+
+@media(max-width: 480px){
+
+    .container{
+        width:100vw;
+    }
+
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5){
+        display: none;
+    }
+}
